@@ -44,6 +44,13 @@ class _MovieListState extends State<MovieList> {
               subtitle: Text(
                 'Rating = ' + movies[position].voteAverage.toString(),
               ),
+              leading: CircleAvatar(
+                backgroundColor: Colors.transparent,
+                backgroundImage: NetworkImage('https://image.tmdb.org/t/p/w500/' +
+                    movies[position]
+                        .posterPath
+                        .toString()), // no matter how big it is, it won't overflow
+              ),
             ),
           );
         },
