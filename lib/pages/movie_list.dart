@@ -31,6 +31,7 @@ class _MovieListState extends State<MovieList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[200],
       appBar: AppBar(
         title: Text("Popular Movies"),
       ),
@@ -38,7 +39,7 @@ class _MovieListState extends State<MovieList> {
         itemCount: (this.moviesCount == null) ? 0 : this.moviesCount,
         itemBuilder: (context, int position) {
           return Card(
-            color: Colors.white,
+            color: Colors.purple[100],
             elevation: 2.0,
             child: ListTile(
               title: Text(movies[position].title),

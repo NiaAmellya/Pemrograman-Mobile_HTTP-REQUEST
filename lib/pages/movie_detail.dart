@@ -18,6 +18,7 @@ class MovieDetail extends StatelessWidget {
     }
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
+        backgroundColor: Colors.purple[100],
         appBar: AppBar(
           title: Text(movie.title),
         ),
@@ -30,8 +31,53 @@ class MovieDetail extends StatelessWidget {
                 height: height / 1.5,
                 child: Image.network(path)),
             Container(
-              child: Text(movie.overview),
-              padding: EdgeInsets.only(left: 16, right: 16),
+              margin: EdgeInsets.only(top: 10, left: 40),
+              child: IntrinsicWidth(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(
+                          bottom: 10, top: 10, left: 10, right: 10),
+                      color: Colors.grey.withOpacity(0.6),
+                      height: 40,
+                      width: 70,
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: Colors.black,
+                          ),
+                          Text(movie.voteAverage.toString(),
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 40, top: 10),
+              child: Text(
+                "Overview",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 40, top: 10),
+              child: Text(
+                  "\t\t\t\t\t\t" +
+                      movie.overview +
+                      "\n" +
+                      "\t\t\t\t\t\t" +
+                      movie.overview +
+                      "\n" +
+                      "\t\t\t\t\t\t" +
+                      movie.overview,
+                  style: TextStyle(fontSize: 12, color: Colors.black)),
             )
           ],
         ))));
