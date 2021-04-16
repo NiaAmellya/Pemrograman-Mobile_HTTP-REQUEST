@@ -1,6 +1,22 @@
 # http_request
 
-A new Flutter project.
+1. Tampilan Percobaan 1
+
+    ![plot](./img/Percobaan1.PNG)
+
+2. Tampilan Percobaan 2
+
+    ![plot](./img/Percobaan2.PNG)
+
+3. Tampilan Percobaan 3
+
+    ![plot](./img/Percobaan3.PNG)
+
+4. Tampilan Setelah di Modifikasi
+
+    ![plot](./img/Rubah1.PNG) 
+  
+    ![plot](./img/Rubah2.PNG)
 
 ## Getting Started
 
